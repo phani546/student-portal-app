@@ -18,8 +18,6 @@ import javax.servlet.http.HttpSession;
  */
 @WebFilter(urlPatterns = {"/index.jsp","/holidays.jsp"})
 public class AuthenticationFilter implements Filter {
-
-
 	/**
 	 * @see Filter#destroy()
 	 */
