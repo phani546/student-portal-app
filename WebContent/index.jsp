@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -45,6 +44,9 @@
 				<li><a href="#tabs-4">Progress Report</a></li>
 				<li><a href="#tabs-5">Holiday Calendar</a></li>
 				<li><a href="#tabs-6">Attendance</a></li>
+				<li><a href="#tabs-7">attendence</a></li>
+				<li><a href="#tabs-8">studentfeedback</a></li>
+
 			</ul>
 			<div id="tabs-1"></div>
 			<div id="tabs-2"></div>
