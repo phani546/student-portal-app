@@ -18,6 +18,9 @@
 		$(function() {
 			$("#tabs").tabs();
 			$("#tabs-5").load("holidays.jsp");
+			$("#tabs-2").load("student.jsp");
+			$("#tabs-6").load("attendence.jsp");
+			$("#tabs-7").load("student feedback.jsp");
 		});
 	});
 </script>
@@ -39,6 +42,8 @@
 				<li><a href="#tabs-3">Staff</a></li>
 				<li><a href="#tabs-4">Progress Report</a></li>
 				<li><a href="#tabs-5">Holiday Calendar</a></li>
+				<li><a href="#tabs-6">attendence</a></li>
+				<li><a href="#tabs-7">student feedback</a></li>
 			</ul>
 			<div id="tabs-1">
 				<p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a,
