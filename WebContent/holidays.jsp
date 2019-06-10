@@ -12,6 +12,11 @@
 <title>HolidayCalendar</title>
 <script>
   $(document).ready(function(){
+	  $.ajax({
+		  url : "/HolidayList",
+		  type: 'GET',
+		  data : JSON.stringify(query_get_id),
+	  });
 	  $('#container').fullCalendar({
 		  header: {
 		    left: 'prev,next today',
@@ -23,8 +28,7 @@
 		  editable: true,
 		  eventLimit: true, // allow "more" link when too many events
 		  events: [
-		    {
-		      title: 'All Day Event',
+		    {		      title: 'All Day Event',
 		      start: '2019-01-01',
 		    },
 		    {
