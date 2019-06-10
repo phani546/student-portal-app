@@ -12,11 +12,7 @@
 <title>HolidayCalendar</title>
 <script>
   $(document).ready(function(){
-	  $.ajax({
-		  url : "/HolidayList",
-		  type: 'GET',
-		  data : JSON.stringify(query_get_id),
-	  });
+	 
 	  $('#container').fullCalendar({
 		  header: {
 		    left: 'prev,next today',
