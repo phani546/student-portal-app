@@ -12,7 +12,6 @@
 <title>HolidayCalendar</title>
 <script>
   $(document).ready(function(){
-	 
 	  $('#container').fullCalendar({
 		  header: {
 		    left: 'prev,next today',
