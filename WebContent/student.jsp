@@ -64,9 +64,25 @@ id="personaladdress" size="30"></td>
 <option value="2nd">2nd</option>
 <option value="3rd">3rd</option>
 <option value="4th">4th</option>
+<option value="5th">5th</option>
+<option value="6th">6th</option>
+<option value="7th">7th</option>
+<option value="8th">8th</option>
+<option value="9th">9th</option>
+<option value="10th">10th</option>
 </select></td>
 </tr>
 
+<tr>
+<td>section</td>
+<td><select name="section">
+<option value="-1" selected>select..</option>
+<option value="A">A</option>
+<option value="B">B</option>
+<option value="c">C</option>
+<option value="D">D</option>
+</select></td>
+</tr>
 <tr>
 <td>District</td>
 <td><select name="District">
@@ -76,7 +92,15 @@ id="personaladdress" size="30"></td>
 <option value="Goa">GOA</option>
 <option value="Patna">PATNA</option>
 </select></td>
-
+<tr>
+<td>Blood group</td>
+<td><select group="blood group">
+<option value="-1" selected>select..</option>
+<option value="o +ve">o+ve</option>
+<option value="o -ve">o-ve</option>
+<option value="A">A</option>
+<option value="b">b</option>
+</select></td>
 </tr>
 
 <tr>
