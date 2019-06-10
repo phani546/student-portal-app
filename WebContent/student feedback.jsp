@@ -2,10 +2,6 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="ISO-8859-1">
-<title><form method="post" action="//submit.form" ></title>
-</head>
 <body>
 <form method="post" action="//submit.form" >
 <div style="width: 400px;">
@@ -70,10 +66,6 @@
 </select>
 </div>
 <div style="padding-bottom: 18px;"><input name="skip_Submit" value="Submit" type="submit"/></div>
-<div>
-<div style="float:right"><a href="https://www.100forms.com" id="lnk100" title="form to email">form to email</a></div>
-<script src="https://www.100forms.com/js/FORMKEY:5EA8ZG2GRYNG/SEND:my@email.com" type="text/javascript"></script>
-</div>
 </form>
 </body>
 </html>
