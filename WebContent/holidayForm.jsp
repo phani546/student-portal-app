@@ -5,7 +5,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
-	href="${pageContext.request.contextPath}/js/jquery-ui.css">
+	href="${pageContext.request.contextPath}/css/jquery-ui.css">
 <script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/jquery-ui.min.js"></script>
 <title>Enter Holidays or Events</title>
