@@ -52,7 +52,7 @@ id="personaladdress" size="30"></td>
 <option value="vizag">VIZAG</option>
 <option value="hyderabad">HYDERABAD</option>
 <option value="rajumundry">RAJUMUNDRY</option>
-<option value="kakinada">PATNA</option>
+<option value="kakinada">kakinada</option>
 </select></td>
 </tr>
 
