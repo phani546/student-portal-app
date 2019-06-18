@@ -7,11 +7,11 @@
 <title>Welcome to Student Portal</title>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath}/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/jquery-ui.css">	
 <script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-<link rel="stylesheet"
-	href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="${pageContext.request.contextPath}/js/jquery-ui.min.js"></script>
 </head>
 <script>
 	$(document).ready(function() {
@@ -25,12 +25,14 @@
 			$("#tabs-8").load("feedback.jsp");
 			$("#tabs-3").load("staff.jsp");
 			$("#tabs-4").load("report.jsp");
+			$("#tabs-51").load("holidayForm.jsp")
 		});
 	});
 </script>
 <body>
 	<div class="content-body">
-		<div class="header"></div>
+		<div class="header">
+		</div>
 		<div>
 			<span class="glyphicon glyphicon-user"></span>${user} <a
 				style="float: right;"
@@ -47,7 +49,6 @@
 				<li><a href="#tabs-6">Attendance</a></li>
 				<li><a href="#tabs-7">attendence</a></li>
 				<li><a href="#tabs-8">feedback</a></li>
-
 			</ul>
 			<div id="tabs-1"></div>
 			<div id="tabs-2"></div>
@@ -75,9 +76,11 @@
 					<div id="tabs-62"></div>
 				</div>
 			</div>
+			<div id="tabs-8">
+			</div>
 		</div>
 		<div class="footer" style="margin-top: 430px;">
-			/ <span>All rights reserved</span>
+			 <span>All rights reserved</span>
 		</div>
 	</div>
 </body>

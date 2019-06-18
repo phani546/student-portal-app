@@ -1,12 +1,10 @@
 package com.shankar.model;
 
-import java.sql.Date;
-
 public class Calendar {
 	private int sno;
 	private String title;
-	private Date eventStartDate;
-	private Date eventEndDate;
+	private String eventStartDate;
+	private String eventEndDate;
 
 	public int getSno() {
 		return sno;
@@ -16,7 +14,7 @@ public class Calendar {
 		this.sno = sno;
 	}
 
-	public String getTitle() {
+	public String event() {
 		return title;
 	}
 
@@ -24,19 +22,23 @@ public class Calendar {
 		this.title = title;
 	}
 
-	public Date getEventStartDate() {
+	public String getEventStartDate() {
 		return eventStartDate;
 	}
 
-	public void setEventStartDate(Date eventStartDate) {
-		this.eventStartDate = eventStartDate;
+	public void setEventStartDate(String string) {
+		this.eventStartDate = string;
 	}
 
-	public Date getEventEndDate() {
+	public String getEventEndDate() {
 		return eventEndDate;
 	}
 
-	public void setEventEndDate(Date eventEndDate) {
+	public void setEventEndDate(String eventEndDate) {
 		this.eventEndDate = eventEndDate;
+	}
+
+	public String getTitle() {
+		return title;
 	}
 }
