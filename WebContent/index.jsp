@@ -5,19 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Welcome to Student Portal</title>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/jquery-ui.css">	
-<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/jquery-ui.min.js"></script>
+<%@ include file="/static-resources.jsp" %>
 </head>
 <script>
 	$(document).ready(function() {
 		$(function() {
 			$("#tabs").tabs();
-			$("#tabs-1").load("home.jsp");
+			$("#tabs-1").load("home1.jsp");
 			$("#tabs-2").load("student.jsp");
 			$("#tabs6").tabs();
 			$("#tabs5").tabs();
