@@ -21,6 +21,9 @@
                 <input type="button" value="Get Result">
             </fieldset>
             
+            <tr>
+            <td>
+            
             <h2>Report Card</h2>
             
             <table border="1">

@@ -7,7 +7,7 @@
 <script type="text/javascript" src="validate.js"></script>
 </head>
 <body>
-  <form action="#" name="StudentRegistration" onsubmit="return(validate());">
+  <form action="StudentRegistration" name="StudentRegistration" onsubmit="return(validate());" method="POST">
 
 <table cellpadding="2" width="20%" bgcolor="99FFFF" align="center"
 cellspacing="2">
@@ -16,6 +16,11 @@ cellspacing="2">
 <td colspan=2>
 <center><font size=4><b>Student Registration Form</b></font></center>
 </td>
+</tr>
+
+<tr>
+<td>id</td>
+<td><input type="text" name="id" size="30"></td>
 </tr>
 
 <tr>
@@ -28,37 +33,18 @@ cellspacing="2">
 <td><input type="text" name="fathername" id="fathername"
 size="30"></td>
 </tr>
-<tr>
-<td>Postal Address</td>
-<td><input type="text" name="paddress" id="paddress" size="30"></td>
-</tr>
+
 
 <tr>
-<td>Personal Address</td>
-<td><input type="text" name="personaladdress"
-id="personaladdress" size="30"></td>
+<td>gender</td>
+<td><input type="radio" name="gender" value="male" size="10">Male
+<input type="radio" name="gender" value="Female" size="10">Female</td>
 </tr>
 
-<tr>
-<td>Sex</td>
-<td><input type="radio" name="sex" value="male" size="10">Male
-<input type="radio" name="sex" value="Female" size="10">Female</td>
-</tr>
-
-<tr>
-<td>City</td>
-<td><select name="City">
-<option value="-1" selected>select..</option>
-<option value="vizag">VIZAG</option>
-<option value="hyderabad">HYDERABAD</option>
-<option value="rajumundry">RAJUMUNDRY</option>
-<option value="kakinada">kakinada</option>
-</select></td>
-</tr>
 
 <tr>
 <td>class</td>
-<td><select name="class">
+<td><select name="studentclass">
 <option value="-1" selected>select..</option>
 <option value="1st">1st</option>
 <option value="2nd">2nd</option>
@@ -84,15 +70,6 @@ id="personaladdress" size="30"></td>
 </select></td>
 </tr>
 <tr>
-<td>District</td>
-<td><select name="District">
-<option value="-1" selected>select..</option>
-<option value="Nalanda">NALANDA</option>
-<option value="UP">UP</option>
-<option value="Goa">GOA</option>
-<option value="Patna">PATNA</option>
-</select></td>
-<tr>
 <td>Blood group</td>
 <td><select group="blood group">
 <option value="-1" selected>select..</option>
@@ -102,39 +79,23 @@ id="personaladdress" size="30"></td>
 <option value="b">b</option>
 </select></td>
 </tr>
-
 <tr>
-<td>State</td>
-<td><select Name="State">
-<option value="-1" selected>select..</option>
-<option value="andhra pradesh">ANDHRA PRADESH</option>
-<option value="Mumbai">MUMBAI</option>
-<option value="tamilnadu">TAMILNADU</option>
-<option value="telangana">TELANGANA</option>
-</select></td>
-</tr>
-<tr>
-<td>PinCode</td>
-<td><input type="text" name="pincode" id="pincode" size="30"></td>
-
-</tr>
-<tr>
-<td>EmailId</td>
-<td><input type="text" name="emailid" id="emailid" size="30"></td>
+<td>FatherEmailId</td>
+<td><input type="text" name="fatheremailid" id="emailid" size="30"></td>
 </tr>
 
 <tr>
-<td>DOB</td>
-<td><input type="text" name="dob" id="dob" size="30"></td>
+<td>DOJ</td>
+<td><input type="text" name="doj" id="doj" size="30"></td>
 </tr>
 
 <tr>
-<td>MobileNo</td>
-<td><input type="text" name="mobileno" id="mobileno" size="30"></td>
+<td>Econtactno</td>
+<td><input type="text" name="Econtactno" id="Econtactmo" size="30"></td>
 </tr>
 <tr>
 <td><input type="reset"></td>
-<td colspan="2"><input type="submit" value="Submit Form" /></td>
+<td colspan="2"><input type="submit" value="Submit" /></td>
 </tr>
 </table>
 </form>
