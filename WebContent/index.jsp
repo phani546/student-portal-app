@@ -16,7 +16,7 @@
 			$("#tabs6").tabs();
 			$("#tabs5").tabs();
 			$("#tabs-52").load("holidays.jsp");
-			$("#tabs-8").load("feedback.jsp");
+			$("#tabs-7").load("feedback.jsp");
 			$("#tabs-3").load("staff.jsp");
 			$("#tabs-4").load("report.jsp");
 			$("#tabs-51").load("holidayForm.jsp")
@@ -25,7 +25,7 @@
 </script>
 <body>
 	<div class="content-body">
-		<div class="header">
+		<div class="headertitle">
 		</div>
 		<div>
 			<span class="glyphicon glyphicon-user"></span>${user} <a
@@ -38,18 +38,15 @@
 				<li><a href="#tabs-1">Home</a></li>
 				<li><a href="#tabs-2">Student</a></li>
 				<li><a href="#tabs-3">Staff</a></li>
-				<li><a href="#tabs-4"> Report</a></li>
-				<li><a href="#tabs-5">Holiday Calendar</a></li>
+				<li><a href="#tabs-4">ProgressReport</a></li>
+				<li><a href="#tabs-5">HolidayCalendar</a></li>
 				<li><a href="#tabs-6">Attendance</a></li>
-				<li><a href="#tabs-7">attendence</a></li>
-				<li><a href="#tabs-8">feedback</a></li>
+				<li><a href="#tabs-7">Feedback</a></li>
 			</ul>
 			<div id="tabs-1"></div>
 			<div id="tabs-2"></div>
 			<div id="tabs-3"></div>
 			<div id="tabs-4"></div>
-			<div id="tabs-6"></div>
-			<div id="tabs-8"></div>
 			<div id="tabs-5">
 				<div id="tabs5">
 					<ul>
@@ -70,8 +67,8 @@
 					<div id="tabs-62"></div>
 				</div>
 			</div>
-			<div id="tabs-8">
-			</div>
+			<div id="tabs-6"></div>
+			<div id="tabs-7"></div>
 		</div>
 		<div class="footer" style="margin-top: 430px;">
 			 <span>All rights reserved</span>

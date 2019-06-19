@@ -8,7 +8,7 @@
 
 </head>
 <body>
-	<header>
+	<header class="mainpage">
 	<div class="main">
 		<div class="logo">
 			<img src="img/logo.png">
@@ -16,7 +16,7 @@
 		</div>
 		<ul>
 			<li class="active"><a href="#">home</a></li>
-			<li><a href="#">login</a></li>
+			<li><a href="index.jsp">login</a></li>
 			<li><a href="#">contact</a></li>
 			<li><a href="#">about us</a></li>
 		</ul>
@@ -31,8 +31,6 @@
 				<a href="#" class="btn2">contact us</a>
 			    <a href="#" class="btn2">enroll registration</a>
 		</div>
-
-		
 	</div>
     </header>
 </body>
