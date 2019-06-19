@@ -4,15 +4,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/fullcalendar.css">
-<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/moment.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/fullcalendar.js"></script>
 <title>HolidayCalendar</title>
+<%@ include file="/static-resources.jsp" %>
 <script>
 	$(document).ready(function() {
 		function getList() {
