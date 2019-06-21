@@ -16,9 +16,10 @@ public class StudentRegistration {
 	private String econtactno;
 	private String fathercontactno;
 	private String fatheremailid;
-	private String houselocation;
 	private String hobbies;
 	private String photopath;
+	private String userName;
+	private String password;
 
 	public int getId() {
 		return id;
@@ -108,15 +109,7 @@ public class StudentRegistration {
 		this.fatheremailid = fatheremailid;
 	}
 
-	public String getHouselocation() {
-		return houselocation;
-	}
-
-	public void setHouselocation(String houselocation) {
-		this.houselocation = houselocation;
-	}
-
-	public String getHobbies() {
+		public String getHobbies() {
 		return hobbies;
 	}
 
@@ -132,4 +125,19 @@ public class StudentRegistration {
 		this.photopath = photopath;
 	}
 
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }

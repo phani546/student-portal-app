@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+ <%@ include file="/static-resources.jsp" %>
  <title>Student Results</title>
 </head>
 <body>
