@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+s  <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
@@ -17,10 +17,19 @@ cellspacing="2">
 <center><font size=4><b>Student Registration Form</b></font></center>
 </td>
 </tr>
+<tr>
+<td>username</td>
+<td><input type="text" name="user name" size="30"></td>
+</tr>
 
 <tr>
-<td>id</td>
-<td><input type="text" name="id" size="30"></td>
+<td>password</td>
+<td><input type="text" name="password" size="30"></td>
+</tr>
+
+<tr>
+<td> student id</td>
+<td><input type="text" name=" student id" size="30"></td>
 </tr>
 
 <tr>
@@ -30,8 +39,11 @@ cellspacing="2">
 
 <tr>
 <td>Father Name</td>
-<td><input type="text" name="fathername" id="fathername"
-size="30"></td>
+<td><input type="text" name="fathername" id="fathername"size="30"></td>
+</tr>
+<tr>
+<td>mother name</td>
+<td><input type="text" name="mothername" id="mothername"size="30"></td>
 </tr>
 
 
@@ -80,6 +92,60 @@ size="30"></td>
 </select></td>
 </tr>
 <tr>
+<td>addresstype </td>
+<td><select type="type">
+<option value="-1" selected>select..</option>
+<option value="residential">residential</option>
+<option value="other">other</option>
+</select></td>
+</tr>
+
+</tr>
+<tr>
+<td>Door no</td>
+<td><input type="text" name="dno"maxlength="6"/>
+</td>
+</tr>
+<tr>
+<td>street</td>
+<td><input type="text" name="street" maxlength="6"/>
+</td>
+</tr>
+<tr>
+<td>landmark</td>
+<td><input type="text" name="landmark" maxlength="6"/>
+</td>
+</tr>
+ 
+<!----- City ---------------------------------------------------------->
+<tr>
+<td>city</td>
+<td><input type="text" name="City" maxlength="30" />
+</td>
+</tr>
+ 
+<!----- Pin Code ---------------------------------------------------------->
+<tr>
+<td>pin code</td>
+<td><input type="text" name="Pin_Code" maxlength="6" />
+</td>
+</tr>
+ 
+<!----- State ---------------------------------------------------------->
+<tr>
+<td>state</td>
+<td><input type="text" name="State" maxlength="30" />
+</td>
+</tr>
+ 
+<!----- Country ---------------------------------------------------------->
+<tr>
+<td>country</td>
+<td><input type="text" name="Country"  maxlength="30"/></td>
+</tr>
+ 
+
+<tr>
 <td>FatherEmailId</td>
 <td><input type="text" name="fatheremailid" id="emailid" size="30"></td>
 </tr>
@@ -94,6 +160,14 @@ size="30"></td>
 <td><input type="text" name="Econtactno" id="Econtactmo" size="30"></td>
 </tr>
 <tr>
+<td>hobbies</td>
+<td><input type="text" name="hobbies" id="hobbies" size="30"></td>
+</tr>
+<tr>
+<td>photopath</td>
+<td><input type="text" name="photopath" id="photopath" size="30"></td>
+</tr>
+<tr> 
 <td><input type="reset"></td>
 <td colspan="2"><input type="submit" value="Submit" /></td>
 </tr>
