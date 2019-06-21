@@ -1,5 +1,5 @@
-s  <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,10 +7,12 @@ s  <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 <script type="text/javascript" src="validate.js"></script>
 </head>
 <body>
-  <form action="StudentRegistration" name="StudentRegistration" onsubmit="return(validate());" method="POST">
+	<form action="StudentRegistration" name="StudentRegistration"
+		onsubmit="return(validate());" method="POST">
 
-<table cellpadding="2" width="20%" bgcolor="99FFFF" align="center"
-cellspacing="2">
+		<table cellpadding="2" width="20%" bgcolor="99FFFF" align="center"
+			cellspacing="2">
+
 
 <tr>
 <td colspan=2>
@@ -32,10 +34,12 @@ cellspacing="2">
 <td><input type="text" name=" student id" size="30"></td>
 </tr>
 
-<tr>
-<td>Name</td>
-<td><input type=text name=textnames id="textname" size="30"></td>
-</tr>
+
+			<tr>
+				<td>Name</td>
+				<td><input type=text name=textnames id="textname" size="30"></td>
+			</tr>
+
 
 <tr>
 <td>Father Name</td>
@@ -47,29 +51,31 @@ cellspacing="2">
 </tr>
 
 
-<tr>
-<td>gender</td>
-<td><input type="radio" name="gender" value="male" size="10">Male
-<input type="radio" name="gender" value="Female" size="10">Female</td>
-</tr>
+
+			<tr>
+				<td>gender</td>
+				<td><input type="radio" name="gender" value="male" size="10">Male
+					<input type="radio" name="gender" value="Female" size="10">Female</td>
+			</tr>
 
 
-<tr>
-<td>class</td>
-<td><select name="studentclass">
-<option value="-1" selected>select..</option>
-<option value="1st">1st</option>
-<option value="2nd">2nd</option>
-<option value="3rd">3rd</option>
-<option value="4th">4th</option>
-<option value="5th">5th</option>
-<option value="6th">6th</option>
-<option value="7th">7th</option>
-<option value="8th">8th</option>
-<option value="9th">9th</option>
-<option value="10th">10th</option>
-</select></td>
-</tr>
+			<tr>
+				<td>class</td>
+				<td><select name="studentclass">
+						<option value="-1" selected>select..</option>
+						<option value="1st">1st</option>
+						<option value="2nd">2nd</option>
+						<option value="3rd">3rd</option>
+						<option value="4th">4th</option>
+						<option value="5th">5th</option>
+						<option value="6th">6th</option>
+						<option value="7th">7th</option>
+						<option value="8th">8th</option>
+						<option value="9th">9th</option>
+						<option value="10th">10th</option>
+				</select></td>
+			</tr>
+
 
 <tr>
 <td>section</td>
@@ -150,10 +156,12 @@ cellspacing="2">
 <td><input type="text" name="fatheremailid" id="emailid" size="30"></td>
 </tr>
 
-<tr>
-<td>DOJ</td>
-<td><input type="text" name="doj" id="doj" size="30"></td>
-</tr>
+
+			<tr>
+				<td>DOJ</td>
+				<td><input type="text" name="doj" id="doj" size="30"></td>
+			</tr>
+
 
 <tr>
 <td>Econtactno</td>

@@ -6,15 +6,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Login Page</title>
-<link rel="stylesheet"
-	href="${pageContext.request.contextPath}/css/bootstrap.min.css">
-<script src="${pageContext.request.contextPath}/js/jquery.min.js"></script>
-<script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+<%@ include file="/static-resources.jsp"%>
 </head>
 <body>
-    <div class="banner">
-      
-    </div>
+	<div class="banner"></div>
 	<div class="container">
 		<div id="loginbox" style="margin-top: 50px;"
 			class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
@@ -72,7 +67,8 @@
 								</div>
 							</div>
 						</div>
-					</form>d
+					</form>
+					d
 
 
 
