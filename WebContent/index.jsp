@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Welcome to Student Portal</title>
-<%@ include file="/static-resources.jsp" %>
+<%@ include file="/static-resources.jsp"%>
 </head>
 <script>
 	$(document).ready(function() {
@@ -26,14 +26,13 @@
 <body>
 	<div class="content-body">
 		<div class="headertitle">
+			<div class="banner">
+				<span class="glyphicon glyphicon-user"></span>${user}
+				<a style="float: right;" href="${pageContext.request.contextPath}/logoutUser"><span
+					class="glyphicon glyphicon-log-out"></span> Sign Out</a>
+			</div>
 		</div>
-		<div>
-			<span class="glyphicon glyphicon-user"></span>${user} <a
-				style="float: right;"
-				href="${pageContext.request.contextPath}/logoutUser"><span
-				class="glyphicon glyphicon-log-out"></span> Sign Out</a>
-		</div>
-		<div style="margin-top: 20px;" id="tabs">
+		<div id="tabs">
 			<ul>
 				<li><a href="#tabs-1">Home</a></li>
 				<li><a href="#tabs-2">Student</a></li>
@@ -71,7 +70,7 @@
 			<div id="tabs-7"></div>
 		</div>
 		<div class="footer" style="margin-top: 430px;">
-			 <span>All rights reserved</span>
+			<span>All rights reserved</span>
 		</div>
 	</div>
 </body>

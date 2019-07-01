@@ -1,6 +1,7 @@
 package com.shankar.model;
 
-public class Staff {
+public class StaffModel {
+	private int id;
 	private String name;
 	private String fatherName;
 	private String motherName;
@@ -12,6 +13,14 @@ public class Staff {
 	private String subjectsThought;
 	private String classAlloted;
 	private String sectionAlloted;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getName() {
 		return name;

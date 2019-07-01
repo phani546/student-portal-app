@@ -1,0 +1,9 @@
+.headertitle {
+    background-color: coral;
+    height: 85px;
+    /* text-shadow: 0 0 black; */
+}
+.footer {
+    background-color: coral;
+    box-shadow: 0 0 black;
+}

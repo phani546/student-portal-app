@@ -4,22 +4,32 @@ package com.shankar.model;
  * @author Admin
  *
  */
-public class StudentRegistration {
+public class StudentRegistrationModel {
 	private int id;
+	private String userName;
+	private String password;
 	private String name;
-	private String studentClass;
-	private String section;
-	private String doj;
 	private String fathername;
 	private String mothername;
+	private String gender;
+	private String studentClass;
+	private String section;
 	private String bloodgroup;
+	private String doj;
 	private String econtactno;
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
 	private String fathercontactno;
 	private String fatheremailid;
 	private String hobbies;
 	private String photopath;
-	private String userName;
-	private String password;
 
 	public int getId() {
 		return id;
@@ -109,7 +119,7 @@ public class StudentRegistration {
 		this.fatheremailid = fatheremailid;
 	}
 
-		public String getHobbies() {
+	public String getHobbies() {
 		return hobbies;
 	}
 
