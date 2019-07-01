@@ -1,6 +1,6 @@
 package com.shankar.model;
 
-public class ProgressReport {
+public class ProgressReportModel {
 	private String studentName;
 	private String stuClass;
 	private String section;
