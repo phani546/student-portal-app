@@ -12,12 +12,18 @@
 		$(function() {
 			$("#tabs").tabs();
 			$("#tabs-1").load("home1.jsp");
-			$("#tabs-2").load("student.jsp");
+	
 			$("#tabs6").tabs();
 			$("#tabs5").tabs();
 			$("#tabs-52").load("holidays.jsp");
 			$("#tabs-7").load("feedback.jsp");
-			$("#tabs-3").load("staff.jsp");
+			
+			$("#tabs3").tabs();
+			$("#tabs-31").load("staff.jsp");
+			
+			$("#tabs2").tabs();
+			$("#tabs-21").load("student.jsp");
+			
 			$("#tabs-4").load("report.jsp");
 			$("#tabs-51").load("holidayForm.jsp")
 		});
@@ -43,8 +49,26 @@
 				<li><a href="#tabs-7">Feedback</a></li>
 			</ul>
 			<div id="tabs-1"></div>
-			<div id="tabs-2"></div>
-			<div id="tabs-3"></div>
+			<div id="tabs-2">
+			  <div id="tabs2">
+			    <ul>
+			      <li><a href="#tabs-21">Registration</a></li>
+				  <li><a href="#tabs-22">View Details</a></li>
+			    </ul>
+			    <div id="tabs-21"></div>
+			    <div id="tabs-22"></div>
+			  </div> 
+			</div>
+			<div id="tabs-3">
+			    <div id="tabs3">
+			       <ul>
+			         <li><a href="#tabs-31">Registration</a></li>
+					 <li><a href="#tabs-32">View Details</a></li>
+			       </ul>
+			       <div id="tabs-31"></div>
+			       <div id="tabs-32"></div>
+			    </div>
+			</div>
 			<div id="tabs-4"></div>
 			<div id="tabs-5">
 				<div id="tabs5">
