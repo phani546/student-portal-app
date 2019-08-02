@@ -8,9 +8,7 @@
 <%@ include file="/static-resources.jsp" %>
 <script>
  $(document).ready(function(){
-    $("#hey").click(function(){
-        $('.notification').append('<div class="alert alert-success alert-dismissible"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>id inserted!!!!!</div>');	
-    });
+    
  });
 </script>
 </head>

@@ -34,8 +34,8 @@
 
 						<div style="margin-bottom: 25px" class="input-group">
 							<span class="input-group-addon"><i
-								class="glyphicon glyphicon-user"></i></span> <input id="userEmail"
-								type="email" class="form-control" name="userEmail" value=""
+								class="glyphicon glyphicon-user"></i></span> <input id="userName"
+								type="text" class="form-control" name="userName" value=""
 								placeholder="Email" required="">
 						</div>
 
@@ -55,9 +55,7 @@
 								</button>
 							</div>
 						</div>
-
-
-						<div class="form-group">
+						<%-- <div class="form-group">
 							<div class="col-md-12 control">
 								<div
 									style="border-top: 1px solid #888; padding-top: 15px; font-size: 85%">
@@ -66,12 +64,8 @@
 										Sign Up Here </a>
 								</div>
 							</div>
-						</div>
+						</div> --%>
 					</form>
-					d
-
-
-
 				</div>
 			</div>
 		</div>
