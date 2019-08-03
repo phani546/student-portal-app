@@ -18,7 +18,7 @@
  <div class="col-md-4 inputGroupContainer">
  <div class="input-group">
  <span class="input-group-addon"><i class="glyphicon glyphicon-user"><</i></span>
- <input name="staff_id" placeholder="staff id" class="form-control" type="text">
+ <input name="student_id" placeholder="student id" class="form-control" type="text">
  </div>
  </div>
  </div>
