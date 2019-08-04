@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import com.shankar.model.Calendar;
+import com.shankar.model.CalendarModel;
 import com.shankar.util.DBConnection;
 import com.shankar.util.DateConverter;
 
@@ -24,17 +24,16 @@ import com.shankar.util.DateConverter;
  * Servlet implementation class HolidayList
  */
 @WebServlet("/HolidayList")
-public class HolidayList extends HttpServlet {
+public class HolidayListController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	static Connection dbConn = null;
-	static Calendar calEvent = new Calendar();
+	static CalendarModel calEvent = new CalendarModel();
 	static {
 		dbConn = DBConnection.getDBCon();
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		System.out.println("inside GET ops");
 		response.getWriter().write(getHolidaysList().toString());
 	}
 
@@ -48,13 +47,13 @@ public class HolidayList extends HttpServlet {
 			calEvent.setEventEndDate(DateConverter.getStringToDate(request.getParameter("enddatepick")));
 			boolean a = insertHolidays(calEvent);
 			request.setAttribute("insertFlag", String.valueOf(a));
-			request.getRequestDispatcher("holidayForm.jsp").forward(request, response);
+			request.getRequestDispatcher("/holidayForm.jsp").forward(request, response);
 		} catch (ParseException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public boolean insertHolidays(Calendar calObj) throws ParseException {
+	public boolean insertHolidays(CalendarModel calObj) throws ParseException {
 		Statement insertStmt = null;
 		boolean a = false;
 		try {

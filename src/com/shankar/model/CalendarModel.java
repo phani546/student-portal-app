@@ -1,6 +1,6 @@
 package com.shankar.model;
 
-public class Calendar {
+public class CalendarModel {
 	private int sno;
 	private String title;
 	private String eventStartDate;

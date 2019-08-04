@@ -1,6 +1,6 @@
 package com.shankar.model;
 
-public class Attendance {
+public class AttendanceModel {
 	private String stuclass;
 	private String section;
 	private String userId;
