@@ -15,7 +15,6 @@
 		$("#datepickerEnd").datepicker({
 			dateFormat : 'yy-mm-dd'
 		});
-		alert(document.getElementById("output"));
 	});
 </script>
 <body>
