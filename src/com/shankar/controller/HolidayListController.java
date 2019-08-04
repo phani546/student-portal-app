@@ -80,12 +80,13 @@ public class HolidayListController extends HttpServlet {
 	}
 
 	public JsonObject getHolidaysList() {
+		Statement getStmt = null;
+		ResultSet rs = null;
 		JsonObject data = new JsonObject();
 		try {
-			if(dbConn!=null) {
-			Statement getStmt = dbConn.createStatement();
+			getStmt = dbConn.createStatement();
 			String query = "select * from events";
-			ResultSet rs = getStmt.executeQuery(query);
+			rs = getStmt.executeQuery(query);
 			String title = "";
 			Date startDate = null;
 			Date endDate = null;
@@ -96,19 +97,31 @@ public class HolidayListController extends HttpServlet {
 				startDate = rs.getDate("startDate");
 				endDate = rs.getDate("endDate");
 				System.out.println(title + "start date" + startDate + "end date" + endDate);
-				jobj.addProperty("title",rs.getString("title"));
-				jobj.addProperty("start",rs.getDate("startDate").toString());
-				jobj.addProperty("end",rs.getDate("endDate").toString());
+				jobj.addProperty("title", rs.getString("title"));
+				jobj.addProperty("start", rs.getDate("startDate").toString());
+				jobj.addProperty("end", rs.getDate("endDate").toString());
 				j.add(jobj);
 			}
-			data.add("data",j);
-		   }else {
-			   data.addProperty("error", "error in db connection");
-		   }
+			data.add("data", j);
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} finally {
+			if (getStmt != null) {
+				try {
+					getStmt.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			if (rs != null) {
+				try {
+					rs.close();
+				} catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
 		}
-        return data;
+		return data;
 	}
 
 	public void updateHolidays() {
