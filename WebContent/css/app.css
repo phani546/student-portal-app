@@ -1,9 +1,38 @@
 .headertitle {
     background-color: coral;
     height: 85px;
-    /* text-shadow: 0 0 black; */
 }
 .footer {
     background-color: coral;
     box-shadow: 0 0 black;
 }
+.glyphicon.glyphicon-trash {
+    font-size: 16px;
+}
+.glyphicon.glyphicon-edit {
+    font-size: 16px;
+}
+.glyphicon.glyphicon-pencil{
+    font-size: 16px;
+}
+#deleteButton {
+    color: 
+    orange;
+}
+#editButton {
+    color: 
+    orange;
+}
+#viewButton {
+    color: 
+    orange;
+}
+button, input, optgroup, select, textarea{
+	color: black !important;
+}
+custom-img-class {
+	height: 40%;
+}
+.main-content-custom { 
+	.margin-right: 250px; 
+};

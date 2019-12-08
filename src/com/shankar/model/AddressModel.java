@@ -1,6 +1,7 @@
 package com.shankar.model;
 
 public class AddressModel {
+	private int id;
 	private String addresstype;
 	private String dno;
 	private String street;
@@ -12,7 +13,15 @@ public class AddressModel {
 	private String state;
 	private String pincode;
 	private String country;
-	private String userId;
+	private int userId;
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getCountry() {
 		return country;
@@ -102,11 +111,11 @@ public class AddressModel {
 		this.pincode = pincode;
 	}
 
-	public String getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
-	public void setUserId(String userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 }

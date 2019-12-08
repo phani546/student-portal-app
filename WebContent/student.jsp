@@ -1,193 +1,283 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ include file="/static-resources.jsp"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<!-- <script type="text/javascript" src="validate.js"></script> -->
-<%@ include file="/static-resources.jsp" %>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/css/registration.css">
 <script>
  $(document).ready(function(){
-    
+	 $("#dob").bootstrapMaterialDatePicker({
+		 time: false
+	 });
+	 $("#file").val(null);
+	 $('#preview').html('');
+	 $("#btnSubmit").click(function(event){
+		   if($('#studentid').val().length < 0){
+			   swal({
+               	"text": "please enter student id",
+               	"icon": "error",
+               	"button":"ok"
+               })
+               return false;
+		   }
+		   event.preventDefault();
+		   var form = $('#fileUploadForm')[0];
+           var data = new FormData(form);
+           $("#btnSubmit").prop("disabled", true);
+	       $.ajax({
+	            type: "POST",
+	            enctype: 'multipart/form-data',
+	            url: "PhotoUpload?studentid=" + $('#studentid').val(),
+	            data: data,
+	            processData: false,
+	            contentType: false,
+	            cache: false,
+	            timeout: 600000,
+	            success: function (data) {
+	            	$('#preview').html('');
+	            	$('#preview').append("<img src='"+"studentimages/"+ data +"' width='100' height='100' style='display: inline-block;'>");
+	                swal({
+	                	"text": "successfully uploaded",
+	                	"icon": "success",
+	                	"button":"ok"
+	                })
+	                $("#file").val(null);
+	                $("#btnSubmit").prop("disabled", false);
+	            },
+	            error: function (e) {
+	                console.log(e.responseText);
+	                console.log("ERROR : ", e);
+	                swal({
+	                	"text": data,
+	                	"icon": "error",
+	                	"button":"ok"
+	                })
+	                $("#btnSubmit").prop("disabled", false);
+	            }
+	        });
+	  });
+	  $.ajax({
+		  url : "${pageContext.request.contextPath}/GetNewStudentId",
+		  success: function (data) {
+			  console.log('data',data)
+			  $('#studentid').val(data);
+		  },
+	      error: function (e){
+	    	  console.log(e.responseText);
+	    	  console.log("ERROR : ", e);
+	    	  swal({
+              	"text": "unable to get autoid please refresh page",
+              	"icon": "error",
+              	"button":"ok"
+              })
+	      }
+		  
+	  })
  });
 </script>
 </head>
 <body>
-    <button id="hey">hello</button>
-    <div class="notification"></div>
-    <form action="${pageContext.request.contextPath}/StudentRegistration"
-		name="StudentRegistration" onsubmit="return(validate());"
-		method="POST">
-		<table cellpadding="2" width="20%" bgcolor="99FFFF" align="center"
-			cellspacing="2">
-			<tr>
-				<td colspan=2>
-					<center>
-						<font size=4><b>Registration Form</b></font>
-					</center>
-				</td>
-			</tr>
-			<tr>
-				<td>studentid</td>
-				<td><input type="text" name="studentid" size="30"></td>
-			</tr>
-
-			<tr>
-				<td>username</td>
-				<td><input type="text" name="username" size="30"></td>
-			</tr>
-
-			<tr>
-				<td>password</td>
-				<td><input type="text" name="password" size="30"></td>
-			</tr>
-
-			<tr>
-				<td>Name</td>
-				<td><input type=text name="studentname" id="textname" size="30"></td>
-			</tr>
-
-			<tr>
-				<td>Father Name</td>
-				<td><input type="text" name="fathername" id="fathername"
-					size="30"></td>
-			</tr>
-			<tr>
-				<td>mother name</td>
-				<td><input type="text" name="mothername" id="mothername"
-					size="30"></td>
-			</tr>
-
-			<tr>
-				<td>gender</td>
-				<td><input type="radio" name="gender" value="male" size="10">Male
-					<input type="radio" name="gender" value="Female" size="10">Female</td>
-			</tr>
-
-			<tr>
-				<td>class</td>
-				<td><select name="studentclass">
-						<option value="1st">1st</option>
-						<option value="2nd">2nd</option>
-						<option value="3rd">3rd</option>
-						<option value="4th">4th</option>
-						<option value="5th">5th</option>
-						<option value="6th">6th</option>
-						<option value="7th">7th</option>
-						<option value="8th">8th</option>
-						<option value="9th">9th</option>
-						<option value="10th">10th</option>
-				</select></td>
-			</tr>
-
-
-			<tr>
-				<td>section</td>
-				<td><select name="section">
-						<option value="A">A</option>
-						<option value="B">B</option>
-						<option value="c">C</option>
-						<option value="D">D</option>
-				</select></td>
-			</tr>
-			<tr>
-				<td>Blood group</td>
-				<td><select name="bloodgroup">
-						<option value="o +ve">o+ve</option>
-						<option value="o -ve">o-ve</option>
-						<option value="A">A</option>
-						<option value="b">b</option>
-				</select></td>
-			</tr>
-
-			<tr>
-				<td>FatherEmailId</td>
-				<td><input type="text" name="fatheremailid" id="emailid"
-					size="30"></td>
-			</tr>
-			<tr>
-				<td>FatherContactNo</td>
-				<td><input type="text" name="fathercontactno" id="emailid"
-					size="30"></td>
-			</tr>
-
-			<tr>
-				<td>DOJ</td>
-				<td><input type="text" name="doj" id="doj" size="30"></td>
-			</tr>
-
-
-			<tr>
-				<td>Econtactno</td>
-				<td><input type="text" name="Econtactno" id="Econtactmo"
-					size="30"></td>
-			</tr>
-			<tr>
-				<td>hobbies</td>
-				<td><input type="text" name="hobbies" id="hobbies" size="30"></td>
-			</tr>
-			<tr>
-				<td>upload photo</td>
-				<td>
-					<form action="PhotoUpload" method="post"
-						enctype="multipart/form-data">
-						<input type="file" name="fileupload" size="50" /><input
-							type="submit" value="Upload" />
+	<div class="col-md-6">
+		<div class="card">
+			<div class="card-body">
+				<form class="form-horizontal"
+					action="${pageContext.request.contextPath}/StudentRegistration"
+					method="POST" name="StudentRegistration">
+					<div class="form-group">
+						<i class="far fa-id-card"></i><input type="text"
+							class="form-control" name="studentid" id="studentid"
+							placeholder="studentid" disabled>
+					</div>
+					<div class="form-group">
+						<i class="fa fa-user"></i><input type="text" class="form-control"
+							name="username" placeholder="username" required="true">
+					</div>
+					<div class="form-group">
+						<i class="fa fa-lock"></i><input type="password"
+							class="form-control" name="password" placeholder="password" required="true">
+					</div>
+					<div class="form-group">
+						<i class="fas fa-rocket"></i><input type="text" class="form-control" name="fathername"
+							placeholder="father's name" required="true">
+					</div>
+					<div class="form-group">
+						<i class="fas fa-rocket"></i><input type="text" class="form-control" name="mothername"
+							placeholder="mother's name" required="true">
+					</div>
+					<div class="form-group">
+						<i class="fa fa-calendar"></i><input type="text"
+							class="form-control" name="date of birth" id="dob"
+							placeholder="date of birth" required="true">
+					</div>
+					<div class="form-group">
+						<i class="far fa-envelope"></i><input type="text" class="form-control" name="fatheremailid" placeholder="father email">
+					</div>
+					<div class="form-group">
+						<i class="fas fa-mobile"></i><input type="text" class="form-control" name="fathercontactno" placeholder="father contact no" required="true">
+					</div>
+					<div class="form-group">
+						<select class="form-control" name="gender">
+							<option value="" disabled selected>-- Gender --</option>
+							<option>Male</option>
+							<option>FeMale</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<select class="form-control" name="studentclass">
+							<option value="" disabled selected>-- Student Class --</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<select class="form-control" name="section">
+							<option value="" disabled selected>-- Section --</option>
+							<option>A</option>
+							<option>B</option>
+							<option>C</option>
+							<option>D</option>
+							<option>E</option>
+							<option>F</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<select class="form-control" name="bloodgroup">
+							<option value="" disabled selected>-- blood group --</option>
+							<option>A +ve</option>
+							<option>B +ve</option>
+							<option>AB +ve</option>
+							<option>B -ve</option>
+							<option>AB -ve</option>
+							<option>0 +ve</option>
+							<option>0 -ve</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<i class="fas fa-snowboarding"></i><input type="text" class="form-control" name="hobbies" placeholder="hobbies">
+					</div>
+					<div class="form-group">
+						<label for="address">permanant address</label>
+						<div class="form-row">
+							<div class="form-group col-sm-4">
+								<i class="fas fa-door-closed"></i><input type="text" class="form-control" name="dno"
+									placeholder="door no" required="true">
+							</div>
+							<div class="form-group col-sm-8">
+								<i class="fas fa-street-view"></i><input type="text" class="form-control" name="street"
+									placeholder="street" required="true">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-xs-4">
+								<i class="fas fa-landmark"></i><input type="text" class="form-control" name="landmark"
+									placeholder="landmark">
+							</div>
+							<div class="form-group col-xs-4">
+								<i class="fas fa-city"></i><input type="text" class="form-control" name="City"
+									placeholder="city" required="true">
+							</div>
+							<div class="form-group col-xs-4">
+								<i class="fas fa-rocket"></i><input type="text" class="form-control" name="Pin_Code"
+									placeholder="pincode" required="true">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-xs-4">
+								<i class="fas fa-rocket"></i><input type="text" class="form-control" name="State"
+									placeholder="State" required="true">
+							</div>
+							<div class="form-group col-xs-4">
+								<i class="fas fa-rocket"></i><input type="text" class="form-control" name="Country"
+									placeholder="Country" value="INDIA">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="photo">temporary address</label>
+						<div class="form-row">
+							<div class="form-group col-sm-4">
+								<i class="fas fa-door-closed"></i><input type="text" class="form-control" name="tdno"
+									placeholder="door no" required="true">
+							</div>
+							<div class="form-group col-sm-8">
+								<i class="fas fa-street-view"></i><input type="text" class="form-control" name="tstreet"
+									placeholder="street" required="true">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-xs-4">
+								<i class="fas fa-landmark"></i><input type="text" class="form-control" name="tlandmark"
+									placeholder="landmark">
+							</div>
+							<div class="form-group col-xs-4">
+								<i class="fas fa-city"></i><input type="text" class="form-control" name="tCity"
+									placeholder="city" required="true">
+							</div>
+							<div class="form-group col-xs-4">
+								<i class="fas fa-rocket"></i><input type="text" class="form-control" name="tPin_Code"
+									placeholder="pincode" required="true">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-xs-4">
+								<i class="fas fa-rocket"></i><input type="text" class="form-control" name="tState"
+									placeholder="State" required="true">
+							</div>
+							<div class="form-group col-xs-4">
+								<i class="fas fa-rocket"></i><input type="text" class="form-control" name="tCountry"
+									placeholder="Country" value="INDIA">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label><input type="checkbox">copy temporary
+							address as permanent address</label>
+					</div>
+					<div class="form-group">
+						<button type="button" class="btn btn-info" data-toggle="modal"
+							data-target="#uploadModal">Upload Photo<i class="fas fa-upload"></i></button>
+					</div>
+					<div class="form-group">
+						<input type="submit" value="submit" class="btn btn-primary">
+						<input class="btn btn-warning" type="reset" value="reset">
+					</div>
+				 </form>
+			</div>
+	   </div>
+	</div>
+	<!-- Modal -->
+	<div id="uploadModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">upload photo</h4>
+				</div>
+				<div class="modal-body">
+					<!-- Form -->
+					<form method='post' enctype="multipart/form-data"
+						id="fileUploadForm">
+						<input type='file' name='fileupload' id='file'
+							class='form-control' required="true"><br> <input type='submit'
+							class='btn btn-info' value='Upload' id='btnSubmit'>
 					</form>
-				</td>
-
-			</tr>
-			<tr>
-				<td>addresstype</td>
-				<td><select name="address_type">
-						<option value="-1" selected>select..</option>
-						<option value="residential">residential</option>
-						<option value="other">other</option>
-				</select></td>
-			</tr>
-
-			</tr>
-			<tr>
-				<td>Door no</td>
-				<td><input type="text" name="dno" maxlength="6" /></td>
-			</tr>
-			<tr>
-				<td>street</td>
-				<td><input type="text" name="street" maxlength="6" /></td>
-			</tr>
-			<tr>
-				<td>landmark</td>
-				<td><input type="text" name="landmark" maxlength="6" /></td>
-			</tr>
-
-			<!----- City ---------------------------------------------------------->
-			<tr>
-				<td>city</td>
-				<td><input type="text" name="City" maxlength="30" /></td>
-			</tr>
-
-			<!----- Pin Code ---------------------------------------------------------->
-			<tr>
-				<td>pin code</td>
-				<td><input type="text" name="Pin_Code" maxlength="6" /></td>
-			</tr>
-
-			<!----- State ---------------------------------------------------------->
-			<tr>
-				<td>state</td>
-				<td><input type="text" name="State" maxlength="30" /></td>
-			</tr>
-
-			<!----- Country ---------------------------------------------------------->
-			<tr>
-				<td>country</td>
-				<td><input type="text" name="Country" maxlength="30" /></td>
-			</tr>
-			<tr>
-				<td><input type="reset"></td>
-				<td colspan="2"><input type="submit" value="Submit" /></td>
-			</tr>
-		</table>
-	</form>
+					<!-- Preview-->
+					<div id='preview'></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- ---- modal -->
 </body>
 </html>

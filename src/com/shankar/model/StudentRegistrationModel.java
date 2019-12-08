@@ -17,15 +17,6 @@ public class StudentRegistrationModel {
 	private String bloodgroup;
 	private String doj;
 	private String econtactno;
-
-	public String getGender() {
-		return gender;
-	}
-
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
-
 	private String fathercontactno;
 	private String fatheremailid;
 	private String hobbies;
@@ -39,36 +30,28 @@ public class StudentRegistrationModel {
 		this.id = id;
 	}
 
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getStudentClass() {
-		return studentClass;
-	}
-
-	public void setStudentClass(String studentClass) {
-		this.studentClass = studentClass;
-	}
-
-	public String getSection() {
-		return section;
-	}
-
-	public void setSection(String section) {
-		this.section = section;
-	}
-
-	public String getDoj() {
-		return doj;
-	}
-
-	public void setDoj(String doj) {
-		this.doj = doj;
 	}
 
 	public String getFathername() {
@@ -87,12 +70,44 @@ public class StudentRegistrationModel {
 		this.mothername = mothername;
 	}
 
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+
+	public String getStudentClass() {
+		return studentClass;
+	}
+
+	public void setStudentClass(String studentClass) {
+		this.studentClass = studentClass;
+	}
+
+	public String getSection() {
+		return section;
+	}
+
+	public void setSection(String section) {
+		this.section = section;
+	}
+
 	public String getBloodgroup() {
 		return bloodgroup;
 	}
 
 	public void setBloodgroup(String bloodgroup) {
 		this.bloodgroup = bloodgroup;
+	}
+
+	public String getDoj() {
+		return doj;
+	}
+
+	public void setDoj(String doj) {
+		this.doj = doj;
 	}
 
 	public String getEcontactno() {
@@ -133,21 +148,5 @@ public class StudentRegistrationModel {
 
 	public void setPhotopath(String photopath) {
 		this.photopath = photopath;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
 	}
 }
