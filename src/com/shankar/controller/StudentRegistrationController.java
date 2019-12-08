@@ -33,7 +33,6 @@ public class StudentRegistrationController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		doGet(request, response);
-
 		stuModel.setId(Integer.parseInt(request.getParameter("studentid")));
 		stuModel.setUserName(request.getParameter("username"));
 		stuModel.setPassword(request.getParameter("password"));

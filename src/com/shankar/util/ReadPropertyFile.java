@@ -1,7 +1,5 @@
 package com.shankar.util;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
@@ -26,6 +24,7 @@ public class ReadPropertyFile {
     	  propMap.put("databaseURL",propUtil.getProperty("db.url"));
           propMap.put("dbusername",propUtil.getProperty("db.username"));
           propMap.put("dbpassword", propUtil.getProperty("db.password"));
+          propMap.put("photoDirPath",  propUtil.getProperty("photoDirPath"));
       }catch(Exception e){
 		  System.out.println("Excepiton in ReadPropertyFile class"+e.getMessage());
 	  }

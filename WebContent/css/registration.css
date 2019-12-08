@@ -1,0 +1,165 @@
+.form-horizontal{
+    background-color: #fff;
+    font-family: 'Rubik', sans-serif;
+    padding: 20px;
+    box-shadow:0 0 10px #505050;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 50px;
+}
+.form-horizontal .form-icon{
+    color: #FF5B61;
+    font-size: 80px;
+    text-align: center;
+    line-height: 100px;
+    text-shadow: 5px 5px 3px #0E7886;
+}
+.form-horizontal .form-group{
+    border-radius: 0;
+    margin: 0 auto 20px;
+    position: relative;
+}
+.form-horizontal .form-group>i{
+    color: #0E7886;
+    font-size: 23px;
+    position: absolute;
+    left: 0px !important;
+    top: 7px;
+}
+.form-horizontal .form-control{
+    color: #0E7886;
+    background-color: transparent;
+    font-size: 16px;
+    letter-spacing: 1px;
+    height: 40px;
+    padding: 0 15px 0 35px;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #0E7886;
+    border-radius: 0;
+    display: inline-block;
+    transition:all 0.3s;
+}
+.form-control::placeholder{
+    color: #0E7886;
+    font-size: 14px;
+}
+.form-horizontal .form-control:focus{ box-shadow: none; }
+.form-horizontal .btn {
+    color: #fff !important;
+    background-color: #FF5B61 !important;
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 100%;
+    padding: 10px 15px;
+    margin: 0 0 10px 0;
+    border-radius: 2px;
+    border: none;
+    transition:all 0.3s;
+}
+.form-horizontal .btn:focus,
+.form-horizontal .btn:hover{
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px #0E7886;
+    box-shadow: 0 0 0 5px #fff inset,0 0 5px #555;
+}
+
+/* .control-label.col-md-2 {
+    color: 
+    #0E7886;
+    font-size: 14px;
+    font-family: Arial !important;
+} */
+
+label {
+  /* position: absolute;
+  top: 0; 
+  left: 0;
+  text-align: left;
+  display: block;
+  width: 100%;
+  height: 52px;
+  line-height: 54px; */
+  text-transform: uppercase;
+  font-size: 13px;
+  background: transparent
+  color: rgba(0,0,0,0.6);
+   margin: 0px auto;
+   color:#0E7886 !important;
+  /* font-weight: 200;
+  background: transparent;
+  color: rgba(0,0,0,0.6);
+  margin: 0px auto;
+  cursor: text;
+  transition: all .15s ease-in-out; */
+}
+.card {
+    box-shadow: 0px 87px 31px #505050;
+    margin-top: 22px;
+    width: 900px;
+    margin-left: 350px;
+
+}
+.card-header {
+    box-shadow: 0px 5px 9px;
+    height: 50px;
+    font-size: 20px;
+    background: #FF5B61 !important;
+}
+/* .card-body {
+    border: 1px solid #FF5B61;
+} */
+.dtp-btn-ok.btn.btn-flat {
+    background-color: #FF5B61 !important;
+    color:#fff !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    background: transparent;
+    
+}
+.dtp-btn-cancel.btn.btn-flat{
+    background-color: #FF5B61 !important;
+    color:#fff !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    background: transparent;
+}
+#btnSubmit {
+	background-color: #FF5B61 !important;
+    color:#fff !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    background: transparent;
+}
+.btn.btn-default.waves-effect.waves-light{
+	background-color: #FF5B61 !important;
+    color:#fff !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    background: transparent;
+}
+input[type="checkbox"]{
+	margin: 5px 0 0;
+	width: 43px !important;
+}
+#file{
+	color: #0E7886;
+    background-color: transparent;
+    font-size: 16px;
+    letter-spacing: 1px;
+    height: 40px;
+    padding: 0 15px 0 35px;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #0E7886;
+    border-radius: 0;
+    display: inline-block;
+    transition:all 0.3s;
+}
+.swal-button.swal-button--confirm{
+	background-color: #FF5B61 !important;
+    color:#fff !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    background: transparent;
+}
