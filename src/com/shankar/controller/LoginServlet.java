@@ -26,13 +26,12 @@ public class LoginServlet extends HttpServlet {
 		String username = request.getParameter("userName");
 		String password = request.getParameter("userPassword");
 		boolean isUserExists = UserValidation.validateUser(username, password);
-		if(isUserExists) {	
-			 request.getSession().setAttribute("user", username);
-             response.sendRedirect("index.jsp");
+		if (isUserExists) {
+			request.getSession().setAttribute("user", username);
+			response.sendRedirect("index.jsp");
 		} else {
 			request.setAttribute("loginerror", "UserId or password you have entered is wrong");
 			request.getRequestDispatcher("/login.jsp").forward(request, response);
 		}
 	}
-
 }

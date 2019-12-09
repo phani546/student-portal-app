@@ -23,6 +23,7 @@
 			
 			$("#tabs2").tabs();
 			$("#tabs-21").load("student.jsp");
+			$("#tabs-22").load("ViewStudentDetails");	
 			
 			$("#tabs-4").load("report.jsp");
 			$("#tabs-51").load("holidayForm.jsp")
