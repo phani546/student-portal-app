@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet Filter implementation class AuthenticationFilter
  */
-@WebFilter(urlPatterns = {"/index.jsp"})
+@WebFilter(urlPatterns = {"/homev.jsp"})
 public class AuthenticationFilter implements Filter {
 	/**
 	 * @see Filter#destroy()
@@ -31,18 +31,11 @@ public class AuthenticationFilter implements Filter {
 	public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest request = (HttpServletRequest) req;
         HttpServletResponse response = (HttpServletResponse) res;
-        String requestUri = request.getRequestURI();
-       /* if(requestUri.matches(".*(css|jpg|png|gif|js|woff|woff2)")){
-            chain.doFilter(request, response);
-            return;
-        }*/
-        
         
         HttpSession session = request.getSession(false);
         boolean loggedIn = session != null && session.getAttribute("user") != null;
         
-
-        if (loggedIn/* || requestUri.endsWith("login.jsp")||requestUri.endsWith("login")*/) {
+        if (loggedIn) {
             chain.doFilter(request, response);
         } else {
             response.sendRedirect("login.jsp");

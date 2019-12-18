@@ -1,10 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ include file="/static-resources.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
+<style>
+  div.jtable-main-container> table.jtable > tbody > tr.jtable-data-row > td {
+    padding: 4px;
+    font-size: 15px !important;
+    font-family: verdana !important;
+  }
+</style>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('#PersonTableContainer').jtable({
@@ -29,7 +35,7 @@
                                 bootbox.alert({
                                 	 title: " id : " + record.id + "&nbsp;&nbsp;" +"name : " + record.name,
                                 	 message: '<html> <head> <style> body { font-size: 15px; font-family: cursive; }; </style> </head> <body> <div class="image-div" align="center">' +
-                                	 '<img src="${pageContext.request.contextPath}/img/download.jpg" alt="image" class="custom-img-class"/></div>'+
+                                	 '<img src="studentdata/"+ record.photopath +"alt="image" class="custom-img-class"/></div>'+
                                 	 '<div class="main-content-custom" align="center">' +
                                 	 '<table border=1>'+
                                 	 '<tr>'+
@@ -252,7 +258,7 @@
 </script>
 </head>
 <body>
-    <div id="PersonTableContainer" class="ptable-cont">
+    <div id="PersonTableContainer">
 	</div>
 </body>
 </html>

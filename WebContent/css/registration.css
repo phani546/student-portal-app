@@ -5,7 +5,7 @@
     box-shadow:0 0 10px #505050;
     border-radius: 5px;
     position: relative;
-    margin-top: 50px;
+    margin-top: 0px !important;
 }
 .form-horizontal .form-icon{
     color: #FF5B61;
@@ -93,7 +93,7 @@ label {
   cursor: text;
   transition: all .15s ease-in-out; */
 }
-.card {
+/* .card {
     box-shadow: 0px 87px 31px #505050;
     margin-top: 22px;
     width: 900px;
@@ -105,9 +105,6 @@ label {
     height: 50px;
     font-size: 20px;
     background: #FF5B61 !important;
-}
-/* .card-body {
-    border: 1px solid #FF5B61;
 } */
 .dtp-btn-ok.btn.btn-flat {
     background-color: #FF5B61 !important;

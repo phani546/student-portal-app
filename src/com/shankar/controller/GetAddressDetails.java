@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
-import com.shankar.model.AddressModel;
+import com.shankar.model.PermanantAddressModel;
 import com.shankar.util.DBConnection;
 
 /**
@@ -45,7 +45,7 @@ public class GetAddressDetails extends HttpServlet {
 			ResultSet rs = stmt.executeQuery(query);
 			JsonArray jarray = new JsonArray();
 			while (rs.next()) {
-				AddressModel addModel = new AddressModel();
+				PermanantAddressModel addModel = new PermanantAddressModel();
 				addModel.setId(rs.getInt("id"));
 				addModel.setAddresstype(rs.getString("address_type"));
 				addModel.setDno(rs.getString("dno"));
