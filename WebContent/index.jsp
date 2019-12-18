@@ -11,7 +11,7 @@
 	$(document).ready(function() {
 		$(function() {
 			$("#tabs").tabs();
-			$("#tabs-1").load("home1.jsp");
+			$("#tabs-1").load("home.jsp");
 	
 			$("#tabs6").tabs();
 			$("#tabs5").tabs();
@@ -46,7 +46,7 @@
 				<li><a href="#tabs-3">Staff</a></li>
 				<li><a href="#tabs-4">ProgressReport</a></li>
 				<li><a href="#tabs-5">HolidayCalendar</a></li>
-				<li><a href="#tabs-6">Attendance</a></li>
+				<li><a href="#tabs-6">attendance</a></li>
 				<li><a href="#tabs-7">Feedback</a></li>
 			</ul>
 			<div id="tabs-1"></div>
@@ -83,6 +83,7 @@
 			</div>
 			<div id="tabs-6">
 				<div id="tabs6">
+
 					<ul>
 						<li><a href="#tabs-61">Student</a></li>
 						<li><a href="#tabs-62">Staff</a></li>

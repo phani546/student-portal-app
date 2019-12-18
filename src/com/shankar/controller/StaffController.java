@@ -27,7 +27,21 @@ public class StaffController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		System.out.println(request.getParameter("name"));
+		System.out.println(request.getParameter("staff_id"));
+		System.out.println(request.getParameter("father_name"));
+		System.out.println(request.getParameter("mother_name"));
+		System.out.println(request.getParameter("languages known"));
+		System.out.println(request.getParameter("qualification"));
+		System.out.println(request.getParameter("Designation"));
+		System.out.println(request.getParameter("Class_Assigned"));
+		System.out.println(request.getParameter("subjects_thought"));
+		System.out.println(request.getParameter("Section_alotted"));
+		System.out.println(request.getParameter("email"));
+		System.out.println(request.getParameter("contact_no"));
+		
+		
 	}
 
 	/**
