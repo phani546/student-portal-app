@@ -18,7 +18,7 @@ public class AttendanceController extends HttpServlet {
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
-		System.out.println("hey");
+		System.out.println("heyy");
 	}
 
 }
