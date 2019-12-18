@@ -1,11 +1,3 @@
-.headertitle {
-    background-color: coral;
-    height: 85px;
-}
-.footer {
-    background-color: coral;
-    box-shadow: 0 0 black;
-}
 .glyphicon.glyphicon-trash {
     font-size: 16px;
 }
@@ -15,18 +7,6 @@
 .glyphicon.glyphicon-pencil{
     font-size: 16px;
 }
-#deleteButton {
-    color: 
-    orange;
-}
-#editButton {
-    color: 
-    orange;
-}
-#viewButton {
-    color: 
-    orange;
-}
 button, input, optgroup, select, textarea{
 	color: black !important;
 }
@@ -34,5 +14,17 @@ custom-img-class {
 	height: 40%;
 }
 .main-content-custom { 
-	.margin-right: 250px; 
+	margin-right: 250px; 
+	padding: 30px;
 };
+div.jtable-main-container> table.jtable > tbody > tr.jtable-data-row > td {
+    padding: 4px;
+    font-size: 15px !important;
+    font-family: verdana !important;
+}
+.singout {
+	margin-top: 15px;
+	float: right;
+	background-color: #fff;
+	font-family: 'Rubik', sans-serif;
+}
