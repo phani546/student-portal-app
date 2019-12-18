@@ -1,6 +1,6 @@
 package com.shankar.model;
 
-public class AddressModel {
+public class PermanantAddressModel {
 	private int id;
 	private String addresstype;
 	private String dno;

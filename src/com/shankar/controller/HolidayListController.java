@@ -25,6 +25,7 @@ import com.shankar.util.DateConverter;
  */
 @WebServlet("/HolidayList")
 public class HolidayListController extends HttpServlet {
+	static org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(HolidayListController.class);
 	private static final long serialVersionUID = 1L;
 	static Connection dbConn = null;
 	static CalendarModel calEvent = new CalendarModel();
@@ -60,9 +61,13 @@ public class HolidayListController extends HttpServlet {
 			insertStmt = dbConn.createStatement();
 			String sqlQuery = "Insert into events(title,startDate,endDate) values(" + '"' + calObj.getTitle() + '"'
 					+ "," + '"' + calObj.getEventStartDate() + '"' + "," + '"' + calObj.getEventEndDate() + '"' + ")";
-			System.out.println(sqlQuery + a);
+			logger.info("events query:"+ sqlQuery);
 			a = insertStmt.execute(sqlQuery);
-			System.out.println(a);
+			if(a) {
+				logger.info("records successfully inserted");
+			}else {
+				logger.info("failed to insert record");
+			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
@@ -96,7 +101,7 @@ public class HolidayListController extends HttpServlet {
 				title = rs.getString("title");
 				startDate = rs.getDate("startDate");
 				endDate = rs.getDate("endDate");
-				System.out.println(title + "start date" + startDate + "end date" + endDate);
+				logger.info("start date" + startDate + "end date" + endDate);
 				jobj.addProperty("title", rs.getString("title"));
 				jobj.addProperty("start", rs.getDate("startDate").toString());
 				jobj.addProperty("end", rs.getDate("endDate").toString());
