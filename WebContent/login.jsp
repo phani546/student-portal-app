@@ -25,12 +25,7 @@
 							<i class="fa fa-lock"></i><input class="form-control"
 								type="password" placeholder="Password" name="userPassword" required>
 						</div>
-						<button type="submit" class="btn btn-default">Sign Up</button>
-						<a href="" class="forgot-pass">Forgot Password ?</a>
-						<div class="form-footer">
-							<span>Do not have an account?</span> <a class="register" href="">Register
-								Now</a>
-						</div>
+						<button type="submit" class="btn btn-default">Sign In</button>
 					</form>
 				</div>
 			</div>

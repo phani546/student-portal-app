@@ -27,7 +27,7 @@ public class GetNewStudentId extends HttpServlet {
 		Connection dbCon = DBConnection.getDBCon();
 		try {
 			Statement stmt = dbCon.createStatement();
-			String countQuery = "select id from user order by id desc";
+			String countQuery = "select id from user order by id desc limit 1";
 			ResultSet countRs = stmt.executeQuery(countQuery);
 			int val=0;
 			while(countRs.next()) {

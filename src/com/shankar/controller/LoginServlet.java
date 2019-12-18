@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.shankar.util.UserValidation;
 
@@ -27,8 +28,16 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("userPassword");
 		boolean isUserExists = UserValidation.validateUser(username, password);
 		if (isUserExists) {
-			request.getSession().setAttribute("user", username);
-			response.sendRedirect("index.jsp");
+			 //get the old session and invalidate
+            HttpSession oldSession = request.getSession(false);
+            if (oldSession != null) {
+                oldSession.invalidate();
+            }
+            //generate a new session
+            HttpSession newSession = request.getSession(true);	
+            newSession.setAttribute("user", username);
+            newSession.setMaxInactiveInterval(3600);
+			response.sendRedirect("homev.jsp");																																																																																																																																																																																																																	
 		} else {
 			request.setAttribute("loginerror", "UserId or password you have entered is wrong");
 			request.getRequestDispatcher("/login.jsp").forward(request, response);

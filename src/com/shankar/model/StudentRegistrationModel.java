@@ -15,12 +15,22 @@ public class StudentRegistrationModel {
 	private String studentClass;
 	private String section;
 	private String bloodgroup;
+	private String dob;
 	private String doj;
 	private String econtactno;
 	private String fathercontactno;
 	private String fatheremailid;
 	private String hobbies;
 	private String photopath;
+
+	
+	public String getDob() {
+		return dob;
+	}
+
+	public void setDob(String dob) {
+		this.dob = dob;
+	}
 
 	public int getId() {
 		return id;
