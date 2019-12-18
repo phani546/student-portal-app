@@ -10,7 +10,7 @@
 <body>
 <fieldset style="width:600px">
                 <legend><b>Student Input Section:</b></legend>
-                Name:<input type="text" id="txtName">   
+                Name:<input type="text" id="id">   
                 Class:<input type="text" id="txtClass"> <br/><br/>
          
                 <table border="1">
