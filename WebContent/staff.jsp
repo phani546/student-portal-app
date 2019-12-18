@@ -3,8 +3,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+ $(document).ready(function(){
+	alert($('#abv').val()); 
+ });
+</script>
+</head>
+
+<body>
 <div class="container">
-	<form class="well form-horizontal" action=" " method="post"
+	<form class="well form-horizontal" action="Staff" method="post"
 		id="contact_form">
 		<fieldset>
 			<!-- Form Name -->
@@ -20,11 +28,10 @@
 			<!-- Text input-->
 
 			<div class="form-group">
-				<label class="col-md-4 control-label">staff id</label>
+				<label class="col-md-4 control-label">staffid</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="input-group">
-						<span class="input-group-addon"><i
-							class="glyphicon glyphicon-user"><</i></span> <input name="staff_id"
+						<span class="input-group-addon"><i class="fas fa-user"></i></span> <input name="staff_id"
 							placeholder="staff id" class="form-control" type="text">
 					</div>
 				</div>
@@ -114,30 +121,31 @@
 					</div>
 				</div>
 			</div>
-
+			
+			
 			<!-- Text input-->
 
 			<div class="form-group">
-				<label class="col-md-4 control-label">subjects Thought</label>
-				<div class="col-md-4 inputGroupContainer">
-					<div class="input-group">
-						<span class="input-group-addon"><i
-							class="glyphicon glyphicon-user"></i></span> <input
-							name="Subjects_Thouht" placeholder="Subjects thought"
-							class="form-control" type="text">
-					</div>
-				</div>
-			</div>
-
-			<!-- Text input-->
-
-			<div class="form-group">
-				<label class="col-md-4 control-label">Class Assigned</label>
+				<label class="col-md-4 control-label">Class Alotted</label>
 				<div class="col-md-4 inputGroupContainer">
 					<div class="input-group">
 						<span class="input-group-addon"><i
 							class="glyphicon glyphicon-user"></i></span> <input
 							name="Class_Assigned" placeholder="Class" class="form-control"
+							type="text">
+					</div>
+				</div>
+			</div>
+			
+			<!-- Text input-->
+
+			<div class="form-group">
+				<label class="col-md-4 control-label">Subjects thought</label>
+				<div class="col-md-4 inputGroupContainer">
+					<div class="input-group">
+						<span class="input-group-addon"><i
+							class="glyphicon glyphicon-user"></i></span> <input
+							name="subjects_thought" placeholder="Class" class="form-control"
 							type="text">
 					</div>
 				</div>
