@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet Filter implementation class AuthenticationFilter
  */
-@WebFilter(urlPatterns = {"/homev.jsp"})
+@WebFilter(urlPatterns = {"/homev.jsp","/viewstudentdetails.jsp"})
 public class AuthenticationFilter implements Filter {
 	/**
 	 * @see Filter#destroy()
