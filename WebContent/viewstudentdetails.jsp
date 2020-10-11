@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -32,6 +31,7 @@
                         if ($selectedRows.length > 0) {
                             $selectedRows.each(function () {
                                 var record = $(this).data('record');
+                                console.log(record.photopath);
                                 bootbox.alert({
                                 	 title: " id : " + record.id + "&nbsp;&nbsp;" +"name : " + record.name,
                                 	 message: '<html> <head> <style> body { font-size: 15px; font-family: cursive; }; </style> </head> <body> <div class="image-div" align="center">' +
@@ -82,6 +82,25 @@
                             });
                         } else {
                         	var h = 'please select atleast one row to view';
+                            swal({
+                               text : h,
+                               icon  : "warning",
+                               button: "ok",
+                            })
+                        }
+                    }
+                },{
+                	icon: 'css/metro/info.png',
+                    text: 'Edit Record',
+                    click: function () {
+                    	var $selectedRows = $('#PersonTableContainer').jtable('selectedRows');
+                        if ($selectedRows.length > 0) {
+                            $selectedRows.each(function () {
+                                var record = $(this).data('record');
+                                console.log(record);
+                            });
+                        }else{
+                        	var h = 'please select atleast one row to edit';
                             swal({
                                text : h,
                                icon  : "warning",

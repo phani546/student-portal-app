@@ -61,11 +61,11 @@ public class HolidayListController extends HttpServlet {
 			insertStmt = dbConn.createStatement();
 			String sqlQuery = "Insert into events(title,startDate,endDate) values(" + '"' + calObj.getTitle() + '"'
 					+ "," + '"' + calObj.getEventStartDate() + '"' + "," + '"' + calObj.getEventEndDate() + '"' + ")";
-			logger.info("events query:"+ sqlQuery);
+			logger.info("events query:" + sqlQuery);
 			a = insertStmt.execute(sqlQuery);
-			if(a) {
+			if (a) {
 				logger.info("records successfully inserted");
-			}else {
+			} else {
 				logger.info("failed to insert record");
 			}
 		} catch (SQLException e) {
